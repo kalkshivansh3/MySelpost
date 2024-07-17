@@ -1,0 +1,41 @@
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 10vh;
+  height: 10%;
+  padding: 12px;
+  background-color: #000000;
+  z-index: 2;
+  width: 100%;
+}
+
+.brand-logo-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  flex: 1;
+  font-family: "Gabriela", sans-serif;
+  font-size: 1.7rem;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+  align-self: center;
+}
+
+.icons-cont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.review-icon{
+  margin-left: -30%;
+  margin-top: 5%;
+  font-size: 20px;
+}

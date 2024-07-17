@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0e0e0 ;
+}
+
+.splash img {
+  border-radius: 5px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

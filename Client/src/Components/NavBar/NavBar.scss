@@ -1,0 +1,50 @@
+$black: #eee;
+$white: #000000;
+$hover-color: #cccccc;
+
+.desktop-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100vw;
+}
+
+.desktop-logo {
+  display: flex;
+  flex-direction: row;
+}
+
+.desktop-logo img {
+  width: 100px;
+}
+
+.desktop-logo h1.brand-name {
+  color: $white;
+  font-weight: bold;
+  align-self: center;
+  font-family: "Gabriela", sans-serif;
+  font-size: 2rem;
+}
+
+.desktop-tabs ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.desktop-tabs ul li {
+  margin-right: 90px;
+}
+
+.desktop-tabs ul li a {
+  color: $white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.desktop-tabs ul li a:hover {
+  color: $hover-color;
+}

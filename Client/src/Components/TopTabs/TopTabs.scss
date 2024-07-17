@@ -1,0 +1,61 @@
+$white: #fff;
+$black: #000000;
+
+.top-header {
+  background-color: $black;
+  color: $white;
+  padding: 1rem;
+  height: 57px;
+}
+
+.top-logo {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+}
+
+.top-tabs {
+  background-color: $black;
+}
+
+.top-tabs-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  color: $white;
+}
+
+.top-tab-title {
+  font-family: "gabriela", serif;
+}
+
+.top-tab {
+  padding: 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: $white;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-bottom-color: $white;
+  }
+
+  &.active {
+    border-bottom-color: $white;
+  }
+}
+
+.top-tab-icon {
+  width: 13%;
+  height: auto;
+  max-width: 100px;
+}
+
+.top-tabs-header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}

@@ -1,0 +1,217 @@
+$white: #fff;
+$black: #000000;
+$name-label-color: #3f3f55;
+$name-label-color2: #999;
+$light-grey: #ccc;
+$dark-grey: #adada6;
+$selection-color: #f0f0f0;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.news-timer {
+  display: flex;
+  flex-direction: column;
+  padding: 30% 0 0 0;
+  position: relative;
+
+  .confetti {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .confetti-piece {
+    width: 10px;
+    height: 10px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    position: absolute;
+    animation: confettiAnimation 2s ease-in-out infinite;
+  }
+
+  @keyframes confettiAnimation {
+    0% {
+      transform: translateY(0) rotateZ(0);
+    }
+    50% {
+      transform: translateY(400px) rotateZ(180deg);
+    }
+    100% {
+      transform: translateY(800px) rotateZ(360deg);
+    }
+  }
+}
+
+.card-slider {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.card {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 0 10px;
+  transition: opacity 0.3s ease;
+}
+
+.card.active {
+  opacity: 1;
+}
+
+img.news-source-img {
+  width: 100%;
+  height: auto;
+}
+
+span.timer-card-date {
+  font-family: "poppins", serif;
+  font-weight: bold;
+}
+
+select {
+  border: #eee;
+  outline: none;
+  padding: 0.3rem;
+  width: 120%;
+  background-color: #eee;
+}
+
+.share-and-selectbox-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.share-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+}
+
+.l-card {
+  min-width: 300px;
+  max-width: 480px;
+  height: auto;
+  background: #f5f5f5;
+  color: #272727;
+  padding: 50px;
+  box-shadow: 0px 7px 24px rgba(100, 100, 100, 0.4);
+}
+
+.l-card__text p {
+  font-size: 1.2rem;
+  font-family: "Vollkorn", serif;
+  font-weight: 400;
+  color: $name-label-color;
+  text-align: left;
+}
+
+.l-card__text p::after {
+  content: "\201D";
+  display: inline;
+  color: $name-label-color2;
+}
+
+.l-card__text p::before {
+  content: "\201C";
+  display: inline;
+  color: $name-label-color2;
+}
+
+.l-card__user {
+  display: flex;
+  flex-direction: row;
+  padding-top: 24px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.l-card__userImage {
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.l-card__userImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.l-card__userInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.l-card__userInfo span:nth-child(1) {
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: $name-label-color;
+}
+
+.l-card__userInfo span:nth-child(2) {
+  color: $dark-grey;
+  font-family: sans-serif;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.timer-buttons {
+  margin: 5% 0 0 4%;
+}
+
+button.read-in-mins {
+  white-space: nowrap;
+  border: none;
+  outline: none;
+  width: 27%;
+  height: 42px;
+  font-weight: bold;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  color: $white;
+  background-color: $black;
+  font-family: "poppins", serif;
+}
+
+.national-timer-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.selection-container {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding-left: 8%;
+}
+
+.options-container {
+  display: flex;
+}
+
+.option {
+  padding: 3px 16px;
+  margin-right: 10px;
+  background-color: $selection-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-family: "poppins", serif;
+  font-size: 0.8rem;
+}
+
+.option.selected {
+  background-color: $black;
+  color: $white;
+}

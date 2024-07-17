@@ -1,0 +1,122 @@
+.camera-news-cont {
+  padding: 30% 0 0 -80%;
+}
+
+.camera-container {
+  padding: 60% 25% 0 0;
+}
+
+img.uploaded-img {
+  width: 50%;
+  height: 20px;
+}
+
+.webcam-video {
+  width: 50%;
+  height: 30%;
+}
+
+img.captured-img {
+  width: 50%;
+  height: 30%;
+}
+
+p.browsing-artc {
+  color: #000000;
+  font-family: "poppins", serif;
+  margin: 12% 0 0 13%;
+}
+
+.capture-btn {
+  color: #fff;
+  border: none;
+  outline: none;
+  font-family: "poppins", serif;
+  background-color: #000000;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.disabled-capture {
+  color: #fff;
+  border: none;
+  outline: none;
+  font-family: "poppins", serif;
+  background-color: #000000;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  font-weight: bold;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.article-card {
+  min-width: 200px;
+  max-width: 480px;
+  height: auto;
+  margin-top: 15%;
+  background: #f5f5f5;
+  color: #272727;
+  padding: 20px;
+  box-shadow: 0px 7px 24px rgba(100, 100, 100, 0.4);
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 7%;
+  font-size: 0.9rem;
+  font-family: "poppins", serif;
+}
+
+button.next-btn {
+  border: none;
+  outline: none;
+  padding: 0.3rem;
+  color: #fff;
+  font-weight: bold;
+  font-family: "poppins", serif;
+  background-color: #387adf;
+  border-radius: 0.3rem;
+  margin: 3% 0 0 85%;
+}
+
+button.question-btn {
+  border: none;
+  outline: none;
+  padding: 0.3rem;
+  color: #fff;
+  font-weight: bold;
+  font-family: "poppins", serif;
+  background-color: #f2613f;
+  border-radius: 0.3rem;
+  margin: -3% 0 0 15%;
+  white-space: nowrap;
+}
+
+input.answer-input-btn {
+  border: none;
+  outline: none;
+  background-color: #eee;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  width: 75%;
+  margin: 3% 3% 0 6%;
+  font-family: "poppins", serif;
+}
+
+button.done-btn {
+  border: none;
+  outline: none;
+  background-color: #03c988;
+  color: #fff;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  font-family: "poppins", serif;
+  font-weight: bold;
+}

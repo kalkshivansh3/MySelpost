@@ -1,0 +1,102 @@
+$white: #fff;
+$charcoal: #3c4142;
+$red: #FA7070;
+
+.hamburger-menu {
+  display: none;
+}
+
+.menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  margin-top: 5%;
+  background-color: #000000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 83.3vh;
+  width: 50%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  z-index: 99;
+  user-select: none;
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: row;
+  background-color: $white;
+  width: 120%;
+  height: 6.8%;
+  border-radius: 0.5rem;
+  padding: 2%;
+  margin: 2% 0 7% -9%;
+}
+
+.menu-trending-item {
+  display: flex;
+  flex-direction: row;
+  background-color: $red;
+  width: 120%;
+  height: 6.3%;
+  border-radius: 0.5rem;
+  padding: 2%;
+  margin: 2% 0 7% -9%;
+  white-space: nowrap;
+}
+
+.menu-item img {
+  object-fit: contain;
+  width: 38%;
+  height: 84%;
+}
+
+.menu-item-link {
+  font-family: "Poppins", serif;
+  font-weight: bold;
+  color: $charcoal;
+  padding-left: 3%;
+  align-self: center;
+  text-decoration: none;
+}
+
+.menu-trending-item1-link{
+  color: $white;
+  font-family: 'poppins', serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 7%;
+  align-self: center;
+}
+
+.menu-trending-item2-link{
+  color: $white;
+  font-family: 'poppins', serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 7%;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+}

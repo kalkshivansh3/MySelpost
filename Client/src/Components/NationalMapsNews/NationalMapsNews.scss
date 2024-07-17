@@ -1,0 +1,31 @@
+$black: #000000;
+$white: #fff;
+
+.custom-popup {
+  .leaflet-popup-content-wrapper {
+    background-color: $black;
+  }
+
+  .leaflet-popup-tip-container {
+    .leaflet-popup-tip {
+      background-color: $black;
+    }
+  }
+}
+
+.loading-news {
+  font-family: "poppins", serif;
+  white-space: nowrap;
+  color: $white;
+}
+
+.city {
+  font-family: "poppins", serif;
+  font-weight: bold;
+  color: $white;
+}
+
+.national-headline {
+  font-family: "poppins", serif;
+  color: $white;
+}

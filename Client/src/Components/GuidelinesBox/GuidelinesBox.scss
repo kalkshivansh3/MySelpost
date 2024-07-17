@@ -1,0 +1,48 @@
+.custom-guidelines-alert {
+  width: 250px;
+  max-width: 250px;
+  height: 40%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 40px 40px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  overflow: hidden;
+
+  &-content {
+    text-align: center;
+    padding-top: 10%;
+    p.guidelines-alert-popup-msg {
+      margin-bottom: 10px;
+      font-family: "poppins", serif;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    ul.list {
+      font-size: 1rem;
+      margin-top: 15%;
+      margin-left: -9%;
+    }
+
+    li.first-two {
+      font-size: 0.99rem;
+      white-space: nowrap;
+    }
+    button.guidelines-alert-close-btn {
+      padding: 5px 10px;
+      border: none;
+      background-color: #03c988;
+      color: white;
+      border-radius: 3px;
+      margin-top: 15%;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: "poppins", serif;
+    }
+  }
+}

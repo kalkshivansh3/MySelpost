@@ -1,0 +1,55 @@
+@media screen and (min-width: 768px) and (max-width: 3084px) {
+    .loading-spinner-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; 
+    }
+  
+    .loading-spinner {
+      width: 60px;
+      height: 60px;
+      border: 5px solid #ccc;
+      border-top-color: #3766f5;
+      border-radius: 50%;
+      animation: spin 1s infinite linear;
+    }
+  
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .loading-spinner-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 55vh; 
+      z-index: 99;
+    }
+  
+    .loading-spinner {
+      width: 60px;
+      height: 60px;
+      border: 5px solid #000000;
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 1s infinite linear;
+    }
+  
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  
