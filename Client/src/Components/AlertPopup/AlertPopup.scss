@@ -1,3 +1,12 @@
+//! COLORS
+$white: #fff;
+$black: #000000;
+$grey-border: #ccc;
+$box-shadow: rgba(0, 0, 0, 0.1);
+
+//! FONT FAMILY
+$poppins: 'poppins';
+
 .custom-alert {
     width: 250px;
     max-width: 250px;
@@ -5,28 +14,28 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: $white;
+    border: 1px solid $grey-border;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px $box-shadow;
     z-index: 9999;
   
     &-content {
       text-align: center;
       p.alert-popup-msg {
         margin-bottom: 10px;
-        font-family: 'poppins', serif;
+        font-family: $poppins, serif;
       }
       button.close-btn {
         padding: 5px 10px;
         border: none;
-        background-color: #000000;
-        color: white;
+        background-color: $black;
+        color: $white;
         border-radius: 3px;
         cursor: pointer;
         font-weight: bold;
-       font-family: 'poppins', serif;
+       font-family: $poppins, serif;
       }
     }
   }

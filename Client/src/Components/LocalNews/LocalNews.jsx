@@ -1,19 +1,28 @@
+//! React imports
 import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
+
+//! Library import
+import axios from "axios";
+
+//! Icons import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVolumeHigh, faVolumeXmark } from "@fortawesome/free-solid-svg-icons";
 
+//! Files import
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
-import axios from "axios";
 import AlertPopup from "../AlertPopup/AlertPopup";
+
+//! Image import
 import News from "../../Images/news.png";
+
+//! URL imports
 import { BASE_URL } from "../config";
 import { LOCATION_URL } from "../location";
+
 import "./LocalNews.scss";
 
 function LocalNews() {
-  const [title, setTitle] = useState();
-  const [body, setBody] = useState();
   const [animating, setAnimating] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -359,7 +368,7 @@ function LocalNews() {
               <div className="news__card__img">
                 <img
                   src={article.image ? article.image : News}
-                  alt="Article"
+                  alt="image related to article"
                   className="article-img"
                 />
               </div>

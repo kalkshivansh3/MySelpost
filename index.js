@@ -17,6 +17,7 @@ const parser = new Parser();
 
 const cache = new NodeCache();
 
+//! Connect database
 const mongoURI =
   "mongodb+srv://himarabkoti:CWoZHUiM2kpze9vd@myselpostcluster.xetzmg2.mongodb.net/";
 mongoose
@@ -32,6 +33,8 @@ mongoose
     console.error("Error connecting to database:", err);
   });
 
+
+//! Database schemas
 const feedbackSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -45,17 +48,17 @@ const contactUsSchema = new mongoose.Schema({
   message: String,
 });
 
-const Feedback = mongoose.model("Feedbacks", feedbackSchema);
-
-const ContactUs = mongoose.model("contact Us", contactUsSchema);
-
 const subscriptionSchema = new mongoose.Schema({
   endpoint: String,
   keys: mongoose.Schema.Types.Mixed,
 });
 
+//! Database models
+const Feedback = mongoose.model("Feedbacks", feedbackSchema);
+const ContactUs = mongoose.model("contact Us", contactUsSchema);
 const Subscription = mongoose.model("Subscription", subscriptionSchema);
 
+//! Web push API keys
 const publicKey =
   "BFYpZ9Lk5HdtTY5gx2InF-FXWMFb0sbaQgQa489op10YK9mBu4hgM-JQGh6K6Pwq8NwGn3tHMbNukgx3IWD51PY";
 const privateKey = "XxvrcNKDtcNNfVrs0dfkEwnOr2kEj6Q9ZP7v-EP3Jqg";
@@ -67,6 +70,7 @@ webpush.setVapidDetails(
 
 app.use(bodyParser.json());
 
+//! News sources
 const newsSources = [
   //! Indian rss feed
   "https://www.india.com/news/india/feed/",
@@ -266,6 +270,7 @@ const newsSources = [
   "https://braziljournal.com/feed/",
 ];
 
+//! Fetch RSS feed
 async function fetchRSS(url) {
   try {
     const cachedData = cache.get(url);
@@ -303,6 +308,7 @@ async function fetchRSS(url) {
   }
 }
 
+//! Extract image from news source
 function extractImage(html) {
   try {
     const match = html.match(
@@ -315,6 +321,7 @@ function extractImage(html) {
   }
 }
 
+//! Restart server
 function restartServer() {
   console.log("Restarting server...");
   // Close the current server instance
@@ -338,6 +345,7 @@ function restartServer() {
   });
 }
 
+//! Fetch news source
 app.get("/api/news/:source", async (req, res) => {
   const source = req.params.source.toLowerCase();
   const index = {
@@ -534,24 +542,7 @@ app.get("/api/news/:source", async (req, res) => {
   }
 });
 
-{/*app.get("/api/translate", async (req, res) => {
-  try {
-    const { text, tl } = req.query;
-    const response = await axios.get(
-      `https://translate.google.bg/translate_a/single?client=gtx&sl=auto&tl=${encodeURIComponent(
-        tl
-      )}&dt=t&q=${encodeURIComponent(text)}`
-    );
-    const translatedText = response.data[0][0][0];
-    res.json({ translatedText });
-  } catch (error) {
-    console.error("Error translating text:", error);
-    res.status(500).json({ error: "Error translating text" });
-    // restartServer();
-    return [];
-  }
-});*/}
-
+//! Store user feedback
 app.post("/api/feedbacks", async (req, res) => {
   try {
     //console.log('Received feedback:', req.body);
@@ -566,6 +557,7 @@ app.post("/api/feedbacks", async (req, res) => {
   }
 });
 
+//! Store contact details
 app.post("/api/contact-us", async (req, res) => {
   try {
     //console.log('Received feedback:', req.body);
@@ -580,7 +572,7 @@ app.post("/api/contact-us", async (req, res) => {
   }
 });
 
-// Store subscription
+//! Store subscription
 app.post("/api/subscribe", async (req, res) => {
   try {
     const existingSubscription = await Subscription.findOneAndUpdate(
@@ -596,7 +588,7 @@ app.post("/api/subscribe", async (req, res) => {
   }
 });
 
-// Send notification
+//! Send notification
 app.post("/api/send-notification", async (req, res) => {
   const { title, body } = req.body;
   const payload = JSON.stringify({ title, body });
@@ -620,7 +612,7 @@ app.post("/api/send-notification", async (req, res) => {
   res.status(200).json({ message: 'Notifications sent' });
 });
 
-// Update subscription
+//! Update subscription
 app.put("/api/update-subscription", async (req, res) => {
   const newSubscription = req.body;
   try {
@@ -646,7 +638,7 @@ app.put("/api/update-subscription", async (req, res) => {
   }
 });
 
-
+//! Start server
 let server = app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

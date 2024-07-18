@@ -1,3 +1,17 @@
+//! COLORS
+$black: #000000;
+$white: #fff;
+$card-bg: #f5f5f5;
+$card-color: #272727;
+$card-shadow: rgba(100, 100, 100, 0.4);
+$light-grey: #eee;
+$green: #03c988;
+$orange: #f2613f;
+$blue: #387adf;
+
+//! FONT FAMILY
+$poppins: "poppins";
+
 .camera-news-cont {
   padding: 30% 0 0 -80%;
 }
@@ -22,17 +36,17 @@ img.captured-img {
 }
 
 p.browsing-artc {
-  color: #000000;
-  font-family: "poppins", serif;
+  color: $black;
+  font-family: $poppins, serif;
   margin: 12% 0 0 13%;
 }
 
 .capture-btn {
-  color: #fff;
+  color: $white;
   border: none;
   outline: none;
-  font-family: "poppins", serif;
-  background-color: #000000;
+  font-family: $poppins, serif;
+  background-color: $black;
   border-radius: 0.3rem;
   padding: 0.3rem;
   font-weight: bold;
@@ -40,11 +54,11 @@ p.browsing-artc {
 }
 
 .disabled-capture {
-  color: #fff;
+  color: $white;
   border: none;
   outline: none;
-  font-family: "poppins", serif;
-  background-color: #000000;
+  font-family: $poppins, serif;
+  background-color: $black;
   border-radius: 0.3rem;
   padding: 0.3rem;
   font-weight: bold;
@@ -57,10 +71,10 @@ p.browsing-artc {
   max-width: 480px;
   height: auto;
   margin-top: 15%;
-  background: #f5f5f5;
-  color: #272727;
+  background: $card-bg;
+  color: $card-color;
   padding: 20px;
-  box-shadow: 0px 7px 24px rgba(100, 100, 100, 0.4);
+  box-shadow: 0px 7px 24px $card-shadow;
 }
 
 .description {
@@ -71,17 +85,17 @@ p.browsing-artc {
   text-overflow: ellipsis;
   margin-top: 7%;
   font-size: 0.9rem;
-  font-family: "poppins", serif;
+  font-family: $poppins, serif;
 }
 
 button.next-btn {
   border: none;
   outline: none;
   padding: 0.3rem;
-  color: #fff;
+  color: $white;
   font-weight: bold;
-  font-family: "poppins", serif;
-  background-color: #387adf;
+  font-family: $poppins, serif;
+  background-color: $blue;
   border-radius: 0.3rem;
   margin: 3% 0 0 85%;
 }
@@ -90,10 +104,10 @@ button.question-btn {
   border: none;
   outline: none;
   padding: 0.3rem;
-  color: #fff;
+  color: $white;
   font-weight: bold;
-  font-family: "poppins", serif;
-  background-color: #f2613f;
+  font-family: $poppins, serif;
+  background-color: $orange;
   border-radius: 0.3rem;
   margin: -3% 0 0 15%;
   white-space: nowrap;
@@ -102,21 +116,21 @@ button.question-btn {
 input.answer-input-btn {
   border: none;
   outline: none;
-  background-color: #eee;
+  background-color: $light-grey;
   padding: 0.3rem;
   border-radius: 0.3rem;
   width: 75%;
   margin: 3% 3% 0 6%;
-  font-family: "poppins", serif;
+  font-family: $poppins, serif;
 }
 
 button.done-btn {
   border: none;
   outline: none;
-  background-color: #03c988;
-  color: #fff;
+  background-color: $green;
+  color: $white;
   padding: 0.3rem;
   border-radius: 0.3rem;
-  font-family: "poppins", serif;
+  font-family: $poppins, serif;
   font-weight: bold;
 }

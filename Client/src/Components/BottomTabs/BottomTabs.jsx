@@ -1,5 +1,8 @@
+//! React imports
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+
+//! Icon imports
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -8,6 +11,8 @@ import {
   faStopwatch,
   faCamera,
 } from "@fortawesome/free-solid-svg-icons";
+
+//! File import
 import "./BottomTabs.scss";
 
 function BottomTabs() {

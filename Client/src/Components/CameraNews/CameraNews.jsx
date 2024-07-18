@@ -1,9 +1,16 @@
+//! React imports
 import React, { useState, useRef } from "react";
-import Tesseract from "tesseract.js";
-import axios from "axios";
+
+//! Library imports
 import toast, { Toaster } from "react-hot-toast";
-import { BASE_URL } from "../config";
+import Tesseract from "tesseract.js";
 import Webcam from "react-webcam";
+import axios from "axios";
+
+//! URL import
+import { BASE_URL } from "../config";
+
+//! File imports
 import GuidelinesBox from "../GuidelinesBox/GuidelinesBox";
 import "./CameraNews.scss";
 
@@ -19,6 +26,7 @@ const CameraNews = () => {
   const [showGuidelineAlert, setShowGuidelineAlert] = useState(true);
   const webcamRef = useRef(null);
 
+  //! Capture image
   const handleCapture = async () => {
     if (showGuidelineAlert) {
       setShowGuidelineAlert(false);
@@ -48,6 +56,7 @@ const CameraNews = () => {
     return noNumbersText.replace(/\s+/g, " ").trim();
   };
 
+  //! Get specific keywords from news article
   function extractKeywords(text) {
     text = text.toLowerCase();
 
@@ -91,6 +100,7 @@ const CameraNews = () => {
     return sortedKeywords.slice(0, 5);
   }
 
+  //! Fetch matching article from captured image
   const fetchMatchingArticles = async (text) => {
     try {
       const response = await axios.get(`${BASE_URL}/news/techcrunch`);

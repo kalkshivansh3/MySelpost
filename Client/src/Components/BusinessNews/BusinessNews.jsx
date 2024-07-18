@@ -1,22 +1,33 @@
+//! React imports
 import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
+
+//! Files import
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+
+//! Icons import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVolumeHigh, faVolumeXmark } from "@fortawesome/free-solid-svg-icons";
+
+//! Library import
 import axios from "axios";
 
+//! Image import
 import News from "../../Images/news.png";
 
+//! URL import
 import { BASE_URL } from "../config";
 import { LOCATION_URL } from "../location";
 
+//! Styling import
 import "../LocalNews/LocalNews";
 
 const BusinessNews = () => {
   const [animating, setAnimating] = useState(false);
   const [factChecking, setFactChecking] = useState(false);
-  const [country, setCountry] = useState(null);
 
+  const [country, setCountry] = useState(null);
+  
   const [cardsCounter, setCardsCounter] = useState(0);
   const [visibleCards, setVisibleCards] = useState(20);
 
@@ -55,6 +66,7 @@ const BusinessNews = () => {
   const [combinedBusinessNews, setCombinedBusinessNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  //! Feth news source data
   const fetchData = useCallback(async () => {
     try {
       setIsLoading(true);
@@ -93,6 +105,7 @@ const BusinessNews = () => {
     fetchData();
   }, [fetchData]);
 
+  //! Swipe card functionality
   function pullChange() {
     if (!$card || !$cardReject || !$cardLike) return;
 
@@ -169,6 +182,7 @@ const BusinessNews = () => {
     document.addEventListener("touchend", handleMouseUpOrTouchEnd);
   }
 
+  //! Check news fact
   const checkFactualClaims = async (article) => {
     setFactChecking(true);
 
@@ -252,7 +266,7 @@ const BusinessNews = () => {
               <div className="news__card__img">
                 <img
                   src={article.image ? article.image : News}
-                  alt="Article"
+                  alt="image related to article"
                   className="article-img"
                 />
               </div>
@@ -339,10 +353,12 @@ const BusinessNews = () => {
     });
   }, []);
 
+  //! Load more articles
   const loadMoreCards = () => {
     setVisibleCards((prevVisibleCards) => prevVisibleCards + numOfCardsPerLoad);
   };
 
+  //! Text to audio functionality
   const [speaking, setSpeaking] = useState(false);
   const [speakingArticle, setSpeakingArticle] = useState(null);
 

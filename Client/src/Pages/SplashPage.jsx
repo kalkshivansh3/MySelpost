@@ -11,7 +11,7 @@ const SplashPage = ({ setLoading }) => {
 
   return (
     <div className="splash">
-      <img src={Logo} alt="logo" width={200} height={200} />
+      <img src={Logo} alt="platform logo" width={200} height={200} />
     </div>
   );
 };

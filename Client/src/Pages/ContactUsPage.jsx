@@ -118,7 +118,7 @@ const ContactUsPage = () => {
         <div className="illustration-section">
           <img
             src={contact}
-            alt="cartoon girl with form"
+            alt="cartoonish girl standing facing form"
             className="contact-us-illustration"
           />
           <div className="contact-info">

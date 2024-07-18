@@ -6,6 +6,7 @@ const staticAssets = [
   clientFolderURL,
 ];
 
+//! Install PWA
 self.addEventListener("install", (evt) => {
   evt.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(staticAssets))
@@ -13,7 +14,7 @@ self.addEventListener("install", (evt) => {
   self.skipWaiting();
 });
 
-
+//! Activate PWA
 self.addEventListener("activate", (evt) => {
   const cacheWhiteList = [CACHE_NAME];
   evt.waitUntil(
@@ -30,7 +31,7 @@ self.addEventListener("activate", (evt) => {
   );
 });
 
-
+//! Show push notification with logo and platform name
 self.addEventListener("push", (event) => {
   let title = "MySelpost";
   let body = "New notification";
@@ -61,6 +62,7 @@ self.addEventListener("push", (event) => {
   event.waitUntil(self.registration.showNotification(title, options));
 });
 
+//! Show push notification with message
 self.addEventListener("message", (event) => {
   if (event.data && event.data.title && event.data.body) {
     const notificationOptions = {
@@ -75,6 +77,7 @@ self.addEventListener("message", (event) => {
   }
 });
 
+//! Redirect to site on clicking notification
 self.addEventListener("notificationclick", (event) => {
   event.notification.close();
   event.waitUntil(
@@ -104,6 +107,7 @@ self.addEventListener("notificationclick", (event) => {
   );
 });
 
+//! Managae notification subscription change
 self.addEventListener("pushsubscriptionchange", async (event) => {
   try {
     const newSubscription = await self.registration.pushManager.subscribe();
@@ -113,6 +117,7 @@ self.addEventListener("pushsubscriptionchange", async (event) => {
   }
 });
 
+//! Update subscription on server
 async function updateSubscriptionOnServer(newSubscription) {
   return fetch('/api/update-subscription', {
     method: 'PUT',

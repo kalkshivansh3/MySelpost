@@ -8,7 +8,7 @@ import { BASE_URL } from "../Components/config";
 import "./DesktopHomePage.scss";
 
 const DesktopHomePage = () => {
-  const pwaUrl = "http://192.168.49.135:3000/";
+  const pwaUrl = "http://192.168.29.135:3000/";
 
   useEffect(() => {
     // Listen for beforeinstallprompt event to show the install popup
@@ -84,7 +84,7 @@ const DesktopHomePage = () => {
           </div>
         </div>
         <div className="mockup">
-          <img src={mockup} alt="smartphone mockup" className="mockup-img" />
+          <img src={mockup} alt="smartphone mockup with news image" className="mockup-img" />
         </div>
       </div>
 

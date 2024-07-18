@@ -1,21 +1,26 @@
+//! React imports
 import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+
+//! Icon imports
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faVolumeHigh,
-  faVolumeXmark,
-  faSync,
-  faSpinner,
+  faVolumeXmark
 } from "@fortawesome/free-solid-svg-icons";
 
+//! Library import
 import axios from "axios";
 
+//! Image import
 import News from "../../Images/news.png";
 
+//! URL imports
 import { BASE_URL } from "../config";
 import { LOCATION_URL } from "../location";
 
+//! File imports
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import "../LocalNews/LocalNews";
 
 const EducationNews = () => {
@@ -237,11 +242,6 @@ const EducationNews = () => {
   const combineNews = (newsArray, source) =>
     newsArray.map((news) => ({ ...news, source }));
 
-  const handleRefresh = () => {
-    setRefreshing(true);
-    fetchData();
-  };
-
   //! Render news articles
   const renderNewsArticles = useCallback(
     (articles) => {
@@ -268,7 +268,7 @@ const EducationNews = () => {
               <div className="news__card__img">
                 <img
                   src={article.image ? article.image : News}
-                  alt="Article"
+                  alt="image related to article"
                   className="article-img"
                 />
               </div>

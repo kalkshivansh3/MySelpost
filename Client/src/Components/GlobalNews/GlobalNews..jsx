@@ -25,7 +25,7 @@ function GlobalNews() {
   const fetchBBCNews = async () => {
     try {
       const response = await axios.get(
-        "http://192.168.49.135:5000/api/news/bbc"
+        "http://192.168.29.135:5000/api/news/bbc"
       );
       setBBCNews(response.data);
       //console.log(response.data)
@@ -37,7 +37,7 @@ function GlobalNews() {
   const fetchCNBCNews = async () => {
     try {
       const response = await axios.get(
-        "http://192.168.49.135:5000/api/news/cnbc"
+        "http://192.168.29.135:5000/api/news/cnbc"
       );
       setCNBCNews(response.data);
     } catch (error) {
@@ -200,7 +200,7 @@ function GlobalNews() {
                 <div className="news__card__img">
                   <img
                     src={article.image ? article.image : News}
-                    alt="Article"
+                    alt="image related to article"
                     className="article-img"
                   />
                 </div>
@@ -256,7 +256,7 @@ function GlobalNews() {
                 <div className="news__card__img">
                   <img
                     src={article.image ? article.image : News}
-                    alt="Article"
+                    alt="image related to article"
                     className="article-img"
                   />
                 </div>

@@ -253,7 +253,7 @@ const TechnologyNews = () => {
               <div className="news__card__img">
                 <img
                   src={article.image ? article.image : News}
-                  alt="Article"
+                  alt="image related to article"
                   className="article-img"
                 />
               </div>

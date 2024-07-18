@@ -34,13 +34,13 @@ const Menu = () => {
         </div>
 
         <div className="menu-item">
-          <img src={Technology} alt="chipset" />
+          <img src={Technology} alt="violet and tomato colored chipset" />
           <Link to="/technology" className="menu-item-link">
             Technology
           </Link>
         </div>
         <div className="menu-item">
-          <img src={Business} alt="budget bag" />
+          <img src={Business} alt="office bag in light red color" />
           <Link to="/business" className="menu-item-link">
             Business
           </Link>
@@ -52,31 +52,31 @@ const Menu = () => {
           </Link>
         </div>
         <div className="menu-item">
-          <img src={Health} alt="heart" />
+          <img src={Health} alt="heart with addition icon" />
           <Link to="/health" className="menu-item-link">
             Health
           </Link>
         </div>
         <div className="menu-item">
-          <img src={Science} alt="dna strand" />
+          <img src={Science} alt="dna strand in light red" />
           <Link to="/science" className="menu-item-link">
             Science
           </Link>
         </div>
         <div className="menu-item">
-          <img src={Entertainment} alt="film reel" />
+          <img src={Entertainment} alt="Shooting video camera" />
           <Link to="/entertainment" className="menu-item-link">
             Entertainment
           </Link>
         </div>
         <div className="menu-item">
-          <img src={Fashion} alt="accessories bag" />
+          <img src={Fashion} alt="cartoonish accessories bag" />
           <Link to="/fashion" className="menu-item-link">
             Fashion
           </Link>
         </div>
         <div className="menu-item">
-          <img src={Book} alt="accessories bag" />
+          <img src={Book} alt="three cartoonish books queue horizontally" />
           <Link to="/education" className="menu-item-link">
             Education
           </Link>

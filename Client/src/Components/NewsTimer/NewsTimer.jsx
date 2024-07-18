@@ -203,7 +203,7 @@ const NewsTimer = () => {
                     <img
                       src={item.image}
                       className="news-source-img"
-                      alt="news source"
+                      alt="image related to article"
                     />
                   </div>
                   <div className="l-card__userInfo">

@@ -42,7 +42,7 @@ const TopTabs = () => {
       <div className="top-tabs-header">
         <header className="top-header">
           <div className="top-logo">
-            <img src={location} alt="red map" className="top-tab-icon" />
+            <img src={location} alt="cartoonish map in red color" className="top-tab-icon" />
             <h1 className="top-tab-title">Maps News</h1>
           </div>
         </header>
